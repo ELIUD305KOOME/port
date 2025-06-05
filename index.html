@@ -13,6 +13,7 @@
     <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <!-- Tailwind -->
 	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
@@ -31,7 +32,56 @@
   <script src="https://kit.fontawesome.com/c3d0b246eb.js" crossorigin="anonymous"></script>
 
 </head>
+<!-- Floating WhatsApp Button -->
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
 
+  .whatsapp-float .tooltip {
+    background-color: #25D366;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    animation: slideUp 0.5s ease;
+  }
+
+  .whatsapp-float .icon {
+    background-color: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .whatsapp-float .icon:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 <body>
   <section id="Header">
     <div>
@@ -46,7 +96,14 @@
       </div>
     </div>
   </section>
-
+<div class="whatsapp-float">
+  <div class="tooltip">💬 Chat with us</div>
+  <a href="https://wa.me/254792182559?text=Hello%2C%20I%20need%20help%20with%20[Your%20Service]%20please." target="_blank">
+    <div class="icon">
+      <i class="fab fa-whatsapp"></i>
+    </div>
+  </a>
+</div>
   <!-----about----->
   <section id="about">
     <div>
